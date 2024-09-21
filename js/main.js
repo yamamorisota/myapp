@@ -32,8 +32,16 @@ function update() {
     y = y + vy;
     vy = vy + 0.5;
   }
+    if (y + 32 > 332) {
+    y = 332 - 32;
+  }
   var image = new Image();
   image.src = "./images/character-01/man.png"
   ctx.drawImage(image, x, y, 32, 32);
+  var groundImage = new Image();
+  console.log("OK");
+  groundImage.src = "./images/ground-01/ground.png"
+  ctx.drawImage(groundImage, 0, 300 + 32, 640, 32);
+
   window.requestAnimationFrame(update);
 }
