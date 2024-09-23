@@ -1,3 +1,7 @@
-document.getElementById("start").addEventListener('click', function () {
-  window.location.href = 'C:/Users/sota7/Desktop/myapp/index.html';
-});
+    document.addEventListener("DOMContentLoaded", function(){
+      fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.querySelector('header').innerHTML = data;
+      });
+    });
